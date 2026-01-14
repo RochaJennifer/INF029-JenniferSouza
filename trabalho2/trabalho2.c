@@ -179,6 +179,16 @@ Rertono (int)
     SEM_ESTRUTURA_AUXILIAR - Não tem estrutura auxiliar
     POSICAO_INVALIDA - Posição inválida para estrutura auxiliar
 */
+void ordenar(int v[], int n) {
+    for (int i = 0; i < n; i++)
+        for (int j = i + 1; j < n; j++)
+            if (v[i] > v[j]) {
+                int t = v[i];
+                v[i] = v[j];
+                v[j] = t;
+            }
+}
+
 int getDadosOrdenadosEstruturaAuxiliar(int posicao, int vetorAux[])
 {
 
